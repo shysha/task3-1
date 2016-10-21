@@ -1,0 +1,211 @@
+/*主页面背景*/
+
+body {
+    background: -webkit-radial-gradient(center, ellipse, #430d6d 0%, #000000 100%);
+    background: -moz-radial-gradient(center, ellipse, #430d6d 0%, #000000 100%);
+    background: radial-gradient(center, ellipse, #430d6d 0%, #000000 100%);
+}
+
+
+/*魔方的定位*/
+
+.main {
+    width: 186px;
+    height: 186px;
+    margin: 20% auto 0 auto;
+    -webkit-perspective: 3000px;
+    -moz-perspective: 3000px;
+    perspective: 3000px;
+}
+
+
+/*盒子的变换设置*/
+
+.box {
+    -webkit-animation: roll 3s ease-in-out infinite;
+    -moz-animation: roll 3s ease-in-out infinite;
+    animation: roll 3s ease-in-out infinite;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-perspective-origin: 50% 50%;
+    -moz-perspective-origin: 50% 50%;
+    perspective-origin: 50% 50%;
+    -webkit-transform-origin: 93px 93px 0;
+    -moz-transform-origin: 93px 93px 0;
+    transform-origin: 93px 93px 0;
+}
+
+
+/*各个面的设置*/
+
+.ma {
+    width: 186px;
+    height: 186px;
+    position: absolute;
+    border-radius: 8px;
+    -webkit-transform: translateZ(93px);
+    -moz-transform: translateZ(93px);
+    transform: translateZ(93px);
+}
+
+.a {
+    background: #000;
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    border: 1px solid #918B8B;
+    float: left;
+}
+
+.mb {
+    width: 186px;
+    height: 186px;
+    border-radius: 8px;
+    position: absolute;
+    -webkit-transform: rotateX(180deg) translateZ(93px);
+    -moz-transform: rotateX(180deg) translateZ(93px);
+    transform: rotateX(180deg) translateZ(93px);
+}
+
+.b {
+    background: #3FD83F;
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    border: 1px solid #918B8B;
+    float: left;
+}
+
+.mc {
+    width: 186px;
+    height: 186px;
+    position: absolute;
+    border-radius: 8px;
+    -webkit-transform: rotateY(-90deg) translateZ(93px);
+    -moz-transform: rotateY(-90deg) translateZ(93px);
+    transform: rotateY(-90deg) translateZ(93px);
+}
+
+.c {
+    background: #FFFF4E;
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    border: 1px solid #918B8B;
+    float: left;
+}
+
+.md {
+    width: 186px;
+    height: 186px;
+    position: absolute;
+    border-radius: 8px;
+    -webkit-transform: rotateY(90deg) translateZ(93px);
+    -moz-transform: rotateY(90deg) translateZ(93px);
+    transform: rotateY(90deg) translateZ(93px);
+}
+
+.d {
+    background: #00FFF7;
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    border: 1px solid #918B8B;
+    float: left;
+}
+
+.me {
+    width: 186px;
+    height: 186px;
+    position: absolute;
+    border-radius: 8px;
+    -webkit-transform: rotateX(90deg) translateZ(93px);
+    -moz-transform: rotateX(90deg) translateZ(93px);
+    transform: rotateX(90deg) translateZ(93px);
+}
+
+.e {
+    background: #FC1212;
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    border: 1px solid #918B8B;
+    float: left;
+}
+
+.mf {
+    width: 186px;
+    height: 186px;
+    position: absolute;
+    border-radius: 8px;
+    -webkit-transform: rotateX(-90deg) translateZ(93px);
+    -moz-transform: rotateX(-90deg) translateZ(93px);
+    transform: rotateX(-90deg) translateZ(93px);
+}
+
+.f {
+    background: pink;
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    border: 1px solid #918B8B;
+    float: left;
+}
+
+
+/*动画效果*/
+
+@-webkit-keyframes roll {
+    16% {
+        -webkit-transform: rotateY(90deg);
+    }
+    33% {
+        -webkit-transform: rotateY(90deg) rotateZ(135deg);
+    }
+    50% {
+        -webkit-transform: rotateY(225deg) rotateZ(135deg);
+    }
+    66% {
+        -webkit-transform: rotateY(135deg) rotateX(135deg);
+    }
+    83% {
+        -webkit-transform: rotateX(135deg);
+    }
+}
+
+@-moz-keyframes roll {
+    16% {
+        -moz-transform: rotateY(90deg);
+    }
+    33% {
+        -moz-transform: rotateY(90deg) rotateZ(135deg);
+    }
+    50% {
+        -moz-transform: rotateY(225deg) rotateZ(135deg);
+    }
+    66% {
+        -moz-transform: rotateY(135deg) rotateX(135deg);
+    }
+    83% {
+        -moz-transform: rotateX(135deg);
+    }
+}
+
+@keyframes roll {
+    16% {
+        transform: rotateY(90deg);
+    }
+    33% {
+        transform: rotateY(90deg) rotateZ(135deg);
+    }
+    50% {
+        transform: rotateY(225deg) rotateZ(135deg);
+    }
+    66% {
+        transform: rotateY(135deg) rotateX(135deg);
+    }
+    83% {
+        transform: rotateX(135deg);
+    }
+}
